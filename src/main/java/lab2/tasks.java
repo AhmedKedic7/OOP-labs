@@ -1,8 +1,11 @@
-package org.example;
-import java.util.Scanner;
+package lab2;
+
 import java.util.Random;
+import java.util.Scanner;
+
+
 /*lab2
-public class Main {
+public class tasks {
     public static void main(String[] args) {
         Scanner reader=new Scanner(System.in);
         String password = "carrot";
@@ -24,7 +27,7 @@ public class Main {
     }
 }
 //2
-public class Main {
+public class tasks {
     public static void main(String[] args) {
         Scanner reader=new Scanner(System.in);
         int sum = 0;
@@ -159,33 +162,34 @@ public class Main {
        }
    }
 }*/
+    //10
+     public class tasks {
+        public static void main(String[] args) {
+            Random random = new Random();
+            int minRange = 0;
+            int maxRange = 100;
+            int randomNumber = random.nextInt(maxRange - minRange + 1) + minRange;
+            int number;
+            int counter = 0;
+            do {
+                System.out.println("Guess a number: ");
+                Scanner reader = new Scanner(System.in);
+                number = reader.nextInt();
+                counter++;
+                if (number < randomNumber) {
+                    System.out.println("The number is greater, guesses made: "+ counter);
+                } else if (number > randomNumber) {
+                    System.out.println("The number is lesser,guesses made: " + counter);
+                } else {
+                    System.out.println("Congratulations, your guess is correct!");
+                }
+            } while (number != randomNumber);
 
-//10.
-public class Main {
-    public static void main(String[] args) {
-        Random random = new Random();
-        int minRange = 0;
-        int maxRange = 100;
-        int randomNumber = random.nextInt(maxRange - minRange + 1) + minRange;
-        int number;
-        int counter = 0;
-        do {
-            System.out.println("Guess a number: ");
-            Scanner reader = new Scanner(System.in);
-            number = reader.nextInt();
-            counter++;
-            if (number < randomNumber) {
-                System.out.println("The number is greater, guesses made: "+ counter);
-            } else if (number > randomNumber) {
-                System.out.println("The number is lesser,guesses made: " + counter);
-            } else {
-                System.out.println("Congratulations, your guess is correct!");
-            }
-        } while (number != randomNumber);
+        }
+
+
 
     }
 
 
-
-}
 
