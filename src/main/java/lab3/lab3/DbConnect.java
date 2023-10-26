@@ -1,4 +1,4 @@
-package org.example.lab3;
+package lab3.lab3;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -6,9 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
-    public class DbConnect {
+public class DbConnect {
         private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/lab3";
         private static final String USERNAME = "root";
         private static final String PASSWORD = "rootroot";
@@ -67,7 +68,10 @@ import java.util.List;
             allTasks.forEach(task -> System.out.println(task.getTaskDescription()));
 
             // Fetch a specific task entity by its ID.
-            int taskIdToFetch = 2;
+            int taskIdToFetch;
+            System.out.println("Which taskid would you like to fetch?");
+            Scanner reader=new Scanner(System.in);
+            taskIdToFetch= reader.nextInt();
             TaskItem specificTask = dbConnect.getTaskByIdFromDatabase(taskIdToFetch);
             if (specificTask != null) {
                 System.out.println("\nTask with ID " + taskIdToFetch + ": " + specificTask.getTaskDescription());
