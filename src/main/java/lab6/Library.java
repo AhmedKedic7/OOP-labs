@@ -1,6 +1,4 @@
-package lab7;
-import lab7.Book;
-import lab7.StringUtils;
+package lab6;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
