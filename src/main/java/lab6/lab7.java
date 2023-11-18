@@ -1,6 +1,4 @@
-package lab7;
-
-import java.util.Arrays;
+package lab6;
 
 class lab7{
     /* 1

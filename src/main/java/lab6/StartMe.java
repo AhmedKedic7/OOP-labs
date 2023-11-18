@@ -1,7 +1,4 @@
-package lab7;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package lab6;
 
 public class StartMe {
     public static void main(String[] args) {
