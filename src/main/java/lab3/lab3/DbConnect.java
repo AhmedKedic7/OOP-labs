@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class DbConnect {
+public class  DbConnect {
         private static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/lab3";
         private static final String USERNAME = "root";
         private static final String PASSWORD = "rootroot";
