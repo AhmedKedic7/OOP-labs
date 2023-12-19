@@ -1,7 +1,6 @@
 package lab9.FirstTask;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,6 +46,17 @@ public class StudentSystem {
             }
         }
         throw new StudentNotFoundException("Student couldn't be found!");
+    }
+    public Student printStudentNameById(int id) throws StudentNotFoundException {
+        Optional<Student> optionalStudent = getStudentsById(id);
+
+        if (optionalStudent.isPresent()) {
+            Student student = optionalStudent.get();
+            System.out.println("Student name: " + student.getName());
+            return student;
+        } else {
+            throw new StudentNotFoundException("Student not found");
+        }
     }
     public Student getHighestGPAStudent() throws EmptyStudentListException{
         if (students == null) {

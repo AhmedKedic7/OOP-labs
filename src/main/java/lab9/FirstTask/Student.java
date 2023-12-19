@@ -12,7 +12,7 @@ public class Student {
         this.name = name;
         this.university = university;
         this.department = department;
-        this.id = id;
+        this.gpa = gpa;
     }
 
     public int getID() {
