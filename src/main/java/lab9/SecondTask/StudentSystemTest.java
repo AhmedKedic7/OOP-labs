@@ -19,11 +19,11 @@ public class StudentSystemTest {
 
     @BeforeEach
     void initializeStudents() {
-        system = new StudentSystem("src/student.csv");
+        system = new StudentSystem("src/students.csv");
     }
     @Test
     void testIfStudentIsPresent() throws IOException {
-        assertFalse(system.loadStudentsFromFile("src/student.csv").isEmpty());
+        assertFalse(system.loadStudentsFromFile("src/students.csv").isEmpty());
 
     } @Test
     void testStudentWithId100() throws StudentNotFoundException {
@@ -41,12 +41,12 @@ public class StudentSystemTest {
     @Test
     void testNamesArray() throws IOException {
         String[] expectedNames = {"Camila Wood", "Alexander Thompson", "Liam Taylor", "Evelyn Jenkins", "Michael Jackson"};
-        String[] actualNames = system.loadStudentsFromFile("src/student.csv").stream().map(Student::getName).limit(5).toArray(String[]::new);
+        String[] actualNames = system.loadStudentsFromFile("src/students.csv").stream().map(Student::getName).limit(5).toArray(String[]::new);
         assertArrayEquals(expectedNames, actualNames);
     }
     @Test
     void testSize() throws IOException {
-        assertEquals(70,system.loadStudentsFromFile("src/student.csv").size());
+        assertEquals(70,system.loadStudentsFromFile("src/students.csv").size());
     }
     @Test
     void testLargestName(){
@@ -59,9 +59,10 @@ public class StudentSystemTest {
         lab9.FirstTask.Student studentWithHighestGPA = system.getHighestGPAStudent();
         assertNotEquals(studentWithHighestGPA,studentWithLongestName);
     }
+    @Test
     void testSameStudent() throws StudentNotFoundException {
         lab9.FirstTask.Student studentWithHighestGPA = system.getHighestGPAStudent();
-        Optional<lab9.FirstTask.Student> studentWithTheId12 = system.getStudentsById(12);
+        lab9.FirstTask.Student studentWithTheId12 = system.printStudentNameById(12);
         assertEquals(studentWithTheId12,studentWithHighestGPA);
     }
 }
