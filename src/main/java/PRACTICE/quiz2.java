@@ -1,5 +1,9 @@
 package PRACTICE;
 
+import Lab8.SecondTask.GradeAnalyzer;
+
+import java.lang.reflect.Field;
+
 public class quiz2 {
     public static void main(String[] args) {
        /* Animal animal= new Animal("ruzdo",Color.BLACK,52);
@@ -146,6 +150,7 @@ class Vehicle{
             return "I am a car";
         }
     }
+
 
 
 

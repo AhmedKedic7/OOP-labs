@@ -1,6 +1,6 @@
 package Lab8.FirstTask;
 
-@UserPermission(2)
+@UserPermission(name = "admin")
 public class Admin implements MessageSender {
     protected String username;
     public Admin(String username){
