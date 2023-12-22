@@ -2,7 +2,7 @@ package Lab8.FirstTask;
 
 public class MessagingSystem {
     @CanSendMessage
-    @RequiresPermission(2)
+    @RequiresPermission(name = "user")
     public static void sendMessage(MessageSender sender, String message){
         if(sender instanceof Admin){
             System.out.println("Admin "+ ((Admin) sender).username+ " sent message " + message);
