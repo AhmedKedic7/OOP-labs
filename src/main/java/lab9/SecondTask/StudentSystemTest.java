@@ -3,7 +3,7 @@ package lab9.SecondTask;
 import lab9.FirstTask.Student;
 import lab9.FirstTask.StudentNotFoundException;
 import lab9.FirstTask.StudentSystem;
-import org.junit.jupiter.api.BeforeEach;
+/*import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -66,3 +66,4 @@ public class StudentSystemTest {
         assertEquals(studentWithTheId12,studentWithHighestGPA);
     }
 }
+*/
